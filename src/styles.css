@@ -1,1 +1,17 @@
+@import url('~normalize.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+    --page-background: #725A7A;
+    --hot-background: #FF7582;
+    --cold-background: #5983FC;
+    --plesant-background: #ED8554;
+}
+
+body {
+    background-color: var(--page-background);
+    font-size: 14px;
+}
