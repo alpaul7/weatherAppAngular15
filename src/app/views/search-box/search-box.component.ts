@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { WeatherService } from './../../services/weather.service'
 
 @Component({
   selector: 'app-search-box',
@@ -8,7 +9,11 @@ import { Component } from '@angular/core';
 export class SearchBoxComponent {
   cityName: string = '';
 
+  constructor(private weatherService: WeatherService) { }
+
   handleCitySelection = () => {
-    console.log(this.cityName)
+    this.weatherService.getWeatherData(this.cityName).subscribe((resp: any) => {
+      console.log(resp)
+    })
   }
 }
