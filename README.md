@@ -19,7 +19,7 @@ A sample project to work on the basics of Angular
 4. Run *npm run start* to serve the project on http://localhost:4200
 
 ### Screenshot
-![screenshot 1][s1]
+![alt text][s1]
 
 
-[s1] /screenshots/s1.png
+[s1]: /screenshots/s1.png "Screenshot 1"
