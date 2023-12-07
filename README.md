@@ -18,8 +18,13 @@ A sample project to work on the basics of Angular
 3. Install dependencies. Run *npm install*
 4. Run *npm run start* to serve the project on http://localhost:4200
 
+### Interesting Sections
+* The wind direction component was fun to build using tailwind css.
+
 ### Screenshot
 ![alt text][s1]
 
 
+
 [s1]: /screenshots/s1.png "Screenshot 1"
+

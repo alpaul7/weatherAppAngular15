@@ -1,3 +1,12 @@
+<div *ngIf="!weatherData">
+    <div class="h-full w-full p-5 text-slate-400 text-center">
+        Search a city name to get its current weather.
+        <div class="w-24 h-24 m-auto mt-10">
+            <img src="./../../../assets/images/search.svg" alt="search icon" class="w-full h-full">
+        </div>
+    </div>
+</div>
+
 <div *ngIf="weatherData">
     <div [ngClass]="weatherData.current.is_day ? 'day-bg' : 'night-bg'" class="text-gray-500">
         <div class="flex items-center justify-between px-3 ">
@@ -14,7 +23,7 @@
             <app-value-box [title]="'Feels Like'" [value]="weatherData.current.feelslike_c.toFixed(0)" unit="deg" />
             <app-value-box [title]="'Visibility'" [value]="weatherData.current.vis_km" unit="km" />
 
-            <app-wind-box [windDirection]="'SW'" [gusts]="weatherData.current.gust_kph" [windSpeed]="weatherData.current.wind_kph" />
+            <app-wind-box [windDirection]="weatherData.current.wind_dir" [gusts]="weatherData.current.gust_kph" [windSpeed]="weatherData.current.wind_kph" />
             <app-value-box [title]="'UV Index'" [value]="weatherData.current.uv" />
             <app-value-box [title]="'Precepitation'" [value]="weatherData.current.precip_in" unit="in"/>
             <app-value-box [title]="'Humidity'" [value]="weatherData.current.humidity" unit="%" />

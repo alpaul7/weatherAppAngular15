@@ -1,1 +1,11 @@
-<p>wind-direction works!</p>
+<div class="wind-d-box h-28 w-28 rounded-full border border-slate-300 ml-5 relative">
+    <div class="direction absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 p-1 bg-slate-100 text-xs text-slate-300" >N</div>
+    <div class="direction absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 p-1 bg-slate-100 text-xs text-slate-300">W</div>
+    <div class="direction absolute top-1/2 left-full -translate-x-1/2 -translate-y-1/2 p-1 bg-slate-100 text-xs text-slate-300">E</div>
+    <div class="direction absolute top-full left-1/2 -translate-x-1/2 -translate-y-1/2 p-1 bg-slate-100 text-xs text-slate-300">S</div>
+
+    <div class="absolute w-full px-2 h-full top-1/2 -translate-y-1/2" [ngClass]="directionClass">
+        <img src="./../../../assets/images/direction.svg" alt="wind direction" class="h-full width-full">
+    </div>
+    <div class="direction-text absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  border border-slate-200 rounded-full p-3 font-bold text-xs bg-slate-100">{{windDirection}}</div>
+</div>

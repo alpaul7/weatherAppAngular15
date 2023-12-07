@@ -1,4 +1,4 @@
-<div class="w-80 h-32 border-2 border-slate-300 rounded-lg p-3 my-2">
+<div class="w-80 h-36 border-2 border-slate-300 rounded-lg p-3 my-2">
     <div class="flex items-center">
         <div class="left w-1/2">
             <div class="my-1" *ngIf="windSpeed">
@@ -11,7 +11,9 @@
                 <div class="text-lg font-bold"> {{gusts}} <span class="text-xs">km/hr</span></div>
             </div>
         </div>
-        <div class="right w-1/2 wind-direction"></div>
+        <div class="right w-1/2 wind-direction">
+            <app-wind-direction [windDirection]="windDirection"/>
+        </div>
     </div>
     
     <!-- <div class="vb-val text-4xl">{{value}} 
