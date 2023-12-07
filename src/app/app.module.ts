@@ -8,6 +8,7 @@ import { HomeComponent } from './views/home/home.component';
 import { SearchBoxComponent } from './views/search-box/search-box.component';
 import { FormsModule } from '@angular/forms';
 import { WeatherBoxComponent } from './views/weather-box/weather-box.component';
+import { ValueBoxComponent } from './components/value-box/value-box.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { WeatherBoxComponent } from './views/weather-box/weather-box.component';
     AppComponent,
     HomeComponent,
     SearchBoxComponent,
-    WeatherBoxComponent
+    WeatherBoxComponent,
+    ValueBoxComponent
   ],
   imports: [
     BrowserModule,

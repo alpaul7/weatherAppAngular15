@@ -15,3 +15,11 @@ body {
     background-color: var(--page-background);
     font-size: 14px;
 }
+
+.day-bg {
+    /* background-image: url(./assets/images/day.webp); */
+}
+
+.night-bg {
+    /* background-image: url('./assets/images/night.webp'); */
+}

@@ -1,12 +1,25 @@
-<div>
-    <div class="flex items-center justify-between px-3 text-gray-500">
-        <div class="city-name text-3xl text-left p-3">New Delhi</div>
-        <div class="local-time text-base">11:23 AM</div>
+<div *ngIf="weatherData">
+    <div [ngClass]="weatherData.current.is_day ? 'day-bg' : 'night-bg'" class="text-gray-500">
+        <div class="flex items-center justify-between px-3 ">
+            <div class="city-name text-3xl text-left p-3">{{weatherData.location.name}}</div>
+            <div class="local-time text-base">{{readableTime(weatherData.location.localtime)}}</div>
+        </div>
+
+        <div class="temperature-box text-9xl text-center font-thin m-auto mt-5 text-blue-400">{{weatherData.current.temp_c}}&deg;</div>
+        <div class="Feels-like-box mt-2 p-2 text-xl w-full text-center">
+            Condition : {{weatherData.current.condition.text}}
+        </div>
+
+        <section class="flex flex-wrap items-center justify-evenly px-3 h-[350px] overflow-hidden overflow-y-scroll">
+            <app-value-box [title]="'Feels Like'" [value]="weatherData.current.feelslike_c.toFixed(0)" unit="deg" />
+            <app-value-box [title]="'Visibility'" [value]="weatherData.current.vis_km" unit="km" />
+            <app-value-box [title]="'UV Index'" [value]="weatherData.current.uv" />
+            <app-value-box [title]="'Precepitation'" [value]="weatherData.current.precip_in" unit="in"/>
+            <app-value-box [title]="'Humidity'" [value]="weatherData.current.humidity" unit="%" />
+            <app-value-box [title]="'Pressure'" [value]="weatherData.current.pressure_mb" unit="mb" />
+        </section>
+
         
-    </div>
-    <div class="temperature-box text-9xl text-center font-thin m-auto mt-5 text-blue-400">35&deg;</div>
-       
-    <div class="Feels-like-box mt-2 p-2 text-xl w-full text-center">
-        Feels Like : 33&deg;
+        
     </div>
 </div>

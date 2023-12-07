@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { WeatherInterface } from 'src/app/types/weatherType';
 
 @Component({
   selector: 'app-home',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  weatherData: WeatherInterface | undefined;
+
+  setWeatherData = (data: WeatherInterface) => {
+    this.weatherData = data
+  }
 }
