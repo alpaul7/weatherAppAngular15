@@ -1,27 +1,25 @@
 # WeatherAppNg
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.7.
+## A weather app built using Angular 15 and Tailwind CSS
+The project uses weatherAPI from rapidAPI to fetch the current weather info.
 
-## Development server
+### Purpose of the project
+A sample project to work on the basics of Angular
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Learnings
+* Basics of Angular Components
+* Using services
+* Making an http request and handling observables using RxJs
+* Tailwind CSS usage
 
-## Code scaffolding
+### Setup
+1. Clone the project
+2. change directory to project root.
+3. Install dependencies. Run *npm install*
+4. Run *npm run start* to serve the project on http://localhost:4200
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Screenshot
+![screenshot 1][s1]
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+[s1] /screenshots/s1.png
