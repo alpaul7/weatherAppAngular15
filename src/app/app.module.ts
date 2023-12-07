@@ -9,6 +9,8 @@ import { SearchBoxComponent } from './views/search-box/search-box.component';
 import { FormsModule } from '@angular/forms';
 import { WeatherBoxComponent } from './views/weather-box/weather-box.component';
 import { ValueBoxComponent } from './components/value-box/value-box.component';
+import { WindBoxComponent } from './views/wind-box/wind-box.component';
+import { WindDirectionComponent } from './components/wind-direction/wind-direction.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { ValueBoxComponent } from './components/value-box/value-box.component';
     HomeComponent,
     SearchBoxComponent,
     WeatherBoxComponent,
-    ValueBoxComponent
+    ValueBoxComponent,
+    WindBoxComponent,
+    WindDirectionComponent
   ],
   imports: [
     BrowserModule,

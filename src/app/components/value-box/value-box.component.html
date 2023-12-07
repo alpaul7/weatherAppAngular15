@@ -1,9 +1,9 @@
 <div class="w-36 h-28 border-2 border-slate-300 rounded-lg p-3 my-2">
-    <div class="vb-title text-sm font-light">{{title}}</div>
-    <div class="vb-val text-4xl">{{value}} 
+    <div class="vb-title text-sm font-light capitalize">{{title}}</div>
+    <div class="vb-val mt-2 text-4xl">{{value}} 
         <span class="text-xs" *ngIf="unit!='deg'; then unit_box; else deg_box"></span>
         <ng-template #unit_box>
-            <span class="text-xs">
+            <span class="text-xs font-bold">
                 {{unit}}
             </span>
         </ng-template>

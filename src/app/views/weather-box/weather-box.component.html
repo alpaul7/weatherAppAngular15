@@ -13,13 +13,14 @@
         <section class="flex flex-wrap items-center justify-evenly px-3 h-[350px] overflow-hidden overflow-y-scroll">
             <app-value-box [title]="'Feels Like'" [value]="weatherData.current.feelslike_c.toFixed(0)" unit="deg" />
             <app-value-box [title]="'Visibility'" [value]="weatherData.current.vis_km" unit="km" />
+
+            <app-wind-box [windDirection]="'SW'" [gusts]="weatherData.current.gust_kph" [windSpeed]="weatherData.current.wind_kph" />
             <app-value-box [title]="'UV Index'" [value]="weatherData.current.uv" />
             <app-value-box [title]="'Precepitation'" [value]="weatherData.current.precip_in" unit="in"/>
             <app-value-box [title]="'Humidity'" [value]="weatherData.current.humidity" unit="%" />
             <app-value-box [title]="'Pressure'" [value]="weatherData.current.pressure_mb" unit="mb" />
         </section>
 
-        
-        
+    
     </div>
 </div>
