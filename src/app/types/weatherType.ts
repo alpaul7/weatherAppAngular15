@@ -45,3 +45,9 @@ export interface Condition {
     icon: string
     code: number
 }
+
+
+export interface ErrorType {
+    code?: number;
+    message: string
+}

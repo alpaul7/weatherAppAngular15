@@ -11,7 +11,6 @@ export class WindDirectionComponent implements OnChanges {
   directionClass: string = '';
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log(changes['windDirection'])
     let direction = changes['windDirection']['currentValue'];
     this.directionClass = this.getDirectionClass(direction)
   }

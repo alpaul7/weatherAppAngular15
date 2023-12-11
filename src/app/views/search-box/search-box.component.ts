@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { WeatherService } from './../../services/weather.service'
-import { WeatherInterface } from 'src/app/types/weatherType';
+import { ErrorType, WeatherInterface } from 'src/app/types/weatherType';
 import { catchError } from 'rxjs';
 
 @Component({
@@ -11,6 +11,7 @@ import { catchError } from 'rxjs';
 export class SearchBoxComponent {
 
   @Output() weatherData = new EventEmitter<WeatherInterface>()
+  @Output() onError = new EventEmitter<ErrorType>()
 
   cityName: string = '';
 
@@ -18,9 +19,16 @@ export class SearchBoxComponent {
 
   handleCitySelection = () => {
     this.weatherService.getWeatherData(this.cityName)
-      .subscribe((resp: WeatherInterface) => {
-        console.log(resp)
-        this.weatherData.emit(resp)
-      })
+      .subscribe(
+        {
+          next: (resp: WeatherInterface) => {
+            this.weatherData.emit(resp)
+          },
+          error: (e) => {
+            this.onError.emit(e.error.error)
+            this.weatherData.emit(undefined)
+          }
+        }
+      )
   }
 }

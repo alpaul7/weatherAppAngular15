@@ -1,8 +1,8 @@
 <section class="w-96 h-[700px] bg-slate-100 m-auto mt-20 rounded-md shadow-xl">
     <section class="search-container w-full">
-        <app-search-box (weatherData)="setWeatherData($event)" />
+        <app-search-box (weatherData)="setWeatherData($event)" (onError)="handleErrorinSearch($event)" />
     </section>
     <section class="weather-details-container mt-10">
-        <app-weather-box [weatherData]="weatherData"/>
+        <app-weather-box [weatherData]="weatherData" [weatherApiError]="errorData" />
     </section>
 </section>

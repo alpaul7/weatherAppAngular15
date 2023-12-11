@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { WeatherInterface } from 'src/app/types/weatherType';
+import { ErrorType, WeatherInterface } from 'src/app/types/weatherType';
 
 @Component({
   selector: 'app-home',
@@ -9,8 +9,13 @@ import { WeatherInterface } from 'src/app/types/weatherType';
 export class HomeComponent {
 
   weatherData: WeatherInterface | undefined;
+  errorData: ErrorType | undefined;
 
   setWeatherData = (data: WeatherInterface) => {
     this.weatherData = data
+  }
+
+  handleErrorinSearch = (error: ErrorType) => {
+    this.errorData = error
   }
 }

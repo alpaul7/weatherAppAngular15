@@ -1,9 +1,12 @@
 <div *ngIf="!weatherData">
-    <div class="h-full w-full p-5 text-slate-400 text-center">
+    <div class="h-full w-full p-5 text-slate-400 text-center" *ngIf="!weatherApiError">
         Search a city name to get its current weather.
         <div class="w-24 h-24 m-auto mt-10">
             <img src="./../../../assets/images/search.svg" alt="search icon" class="w-full h-full">
         </div>
+    </div>
+    <div class="h-full w-full p-5 text-red-800 text-center" *ngIf="weatherApiError?.message">
+        {{weatherApiError?.message}}
     </div>
 </div>
 
